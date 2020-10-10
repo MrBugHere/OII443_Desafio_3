@@ -4,7 +4,7 @@ import numpy as np
 
 
 
-class dataInput:
+class DataInput:
     def __init__(self, filePath):
         # Recibe como argumento la direcccion del documento CSV (filepath) y crea DataFrame con un numpy array 2D
 
