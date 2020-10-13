@@ -47,8 +47,39 @@ class KDtree:
         self.expandNode(newNode, leftlist, dim+1, 0)
         self.expandNode(newNode, rightlist, dim+1, 1)
 
+    class Printer:
+        def __init__(self, text):
+            self.text = text
+
     def printTree(self):
-        print(self.rootNode.content)
+        print(self.traversePreOrder(self.rootNode))
+
+    def traversePreOrder(self, root):
+        printer = self.Printer('')
+        printer.text = ''.join([printer.text, str(root.content)])
+
+        pointerRight = "└──"
+        pointerLeft = "├──" if root.right is not None else "└──"
+
+        sibling = True if root.right is not None else False
+
+        self.traverseNodes(printer, "", pointerLeft, root.left, sibling)
+        self.traverseNodes(printer, "", pointerRight, root.right, False)
+
+        return printer.text
+
+    def traverseNodes(self, printer, padding, pointer, node, hasRightSibling):
+        if node is not None:
+            printer.text = ''.join([printer.text, '\n', padding, pointer, str(node.content)])
+            padding = ''.join([padding, "│  "]) if hasRightSibling else ''.join([padding, "   "])
+            pointerRight = "└──"
+            pointerLeft = "├──" if node.right is not None else "└──"
+            sibling = True if node.right is not None else False
+            self.traverseNodes(printer, padding, pointerLeft, node.left, sibling)
+            self.traverseNodes(printer, padding, pointerRight, node.right, False)
+
+    def knn(self, point, k):
+        pass
 
 
 if __name__ == "__main__":
