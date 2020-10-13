@@ -1,3 +1,4 @@
+import math
 import operator
 
 
@@ -164,4 +165,7 @@ if __name__ == "__main__":
 
     point = [14,9]
     print(kd.arr_closest_point(test, point))
-    print(kd.kd_closest_point(point))
+    found = kd.kd_closest_point(point)
+    print(found)
+    distance = math.sqrt(kd.distance_sqrd(point, found))
+    print("distance: %f" % distance)
