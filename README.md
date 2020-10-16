@@ -34,6 +34,6 @@ class KDtree:
         self.dimensions = dimensions
         self.generateTree()
 ```
-
+La función generateTree() crea el nodo raíz y luego mediante la función expandNode() se expande, donde se itera este proceso dependiendo de los niveles que se deseen.
 
 
