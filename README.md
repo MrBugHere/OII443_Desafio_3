@@ -5,7 +5,7 @@ Manuel está interesado en el mercado del desarrollo móvil, por lo que comenzó
 
 ### Solución
 
-Para realizar el programa solicitado por manuel, el equipo acordó utilizar la estructura KDTree para determinar que aplicaciones son similares y poder analizar de mejor manera los datos recopilados por manuel.
+Para realizar el programa solicitado por manuel, el equipo acordó utilizar la estructura KDTree para determinar que aplicaciones son similares y poder analizar de mejor manera los datos recopilados por Manuel.
 
 ### Preprocesamiento de datos
 
